@@ -1,6 +1,9 @@
-import knex from "knex";
 import knexConfig from "../../../knexfile";
 import knexInitializer from "knex";
+
+export const knex = knexInitializer(
+  knexConfig[process.env.NODE_ENV || "development"]
+);
 
 export async function getItem(idno) {
   const review = await knex("alltable");
@@ -13,7 +16,6 @@ export async function getItem(idno) {
 
 export async function getFullTable() {
   const review = await knex("alltable");
-
   if (!review) {
     return null;
   }

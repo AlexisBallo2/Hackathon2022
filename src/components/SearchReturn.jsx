@@ -11,8 +11,8 @@ import { useState, useEffect } from "react";
 
 const SearchReturn = () => {
   function new1(dat) {
-    setdataToShow(dat);
-    console.log("dat", dat);
+    console.log("dat", dat.data);
+    setdataToShow(dat.data);
     console.log(dataToShow);
   }
   const [dataToShow, setdataToShow] = useState([]);
