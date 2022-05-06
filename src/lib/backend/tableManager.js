@@ -11,8 +11,8 @@ export async function getItem(idno) {
   return review;
 }
 
-export function getFullTable(idno) {
-  const review = knex("alltable");
+export async function getFullTable() {
+  const review = await knex("alltable");
 
   if (!review) {
     return null;

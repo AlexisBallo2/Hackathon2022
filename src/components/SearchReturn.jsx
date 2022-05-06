@@ -11,22 +11,23 @@ import { useState, useEffect } from "react";
 // };
 
 const SearchReturn = () => {
+  async function getshit() {
+    const data = await fetch("/api/getData")
+      .then((response) => console.log(response))
+      .then((data) => setdataToShow(data))
+      .then(setLoading(false));
+    return data;
+  }
   var [dataToShow, setdataToShow] = useState("none");
   var [loading, setLoading] = useState(true);
   useEffect(() => {
-    const getshit = () => {
-      const data = fetch("/api/getData")
-        .then((response) => response.json())
-        .then((data) => console.log(data));
-    };
-    getshit();
+    getshit().then((resposne) => setdataToShow(resposne));
   }, []);
 
   return (
     <div>
       SearchReturn Here
       <button onClick>Click me!</button>
-      {/* {loading ? "Loading" : dataToShow.data} */}
     </div>
   );
 };

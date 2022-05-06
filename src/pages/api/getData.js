@@ -2,8 +2,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { getFullTable } from "../../lib/backend/tableManager";
 
-const allData = getFullTable();
-
-export default function handler(req, res) {
-  res.status(200).json({ data: "here" });
+export default async function handler(req, res) {
+  const allData = await getFullTable();
+  res.status(200).json({ data: allData });
 }
