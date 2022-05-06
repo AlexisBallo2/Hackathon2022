@@ -1,4 +1,3 @@
-import { set } from "express/lib/application";
 import { NextPage } from "next";
 import { useState, useEffect } from "react";
 //to submit a book into the database
@@ -11,23 +10,23 @@ import { useState, useEffect } from "react";
 // };
 
 const SearchReturn = () => {
-  async function getshit() {
-    const data = await fetch("/api/getData")
-      .then((response) => console.log(response))
-      .then((data) => setdataToShow(data))
-      .then(setLoading(false));
-    return data;
+  function new1(dat) {
+    setdataToShow(dat);
+    console.log("dat", dat);
+    console.log(dataToShow);
   }
-  var [dataToShow, setdataToShow] = useState("none");
-  var [loading, setLoading] = useState(true);
-  useEffect(() => {
-    getshit().then((resposne) => setdataToShow(resposne));
-  }, []);
+  const [dataToShow, setdataToShow] = useState([]);
 
+  const getshit = async () => {
+    const response = await fetch("/api/getData");
+    const data = await response.json();
+    new1(data);
+  };
   return (
     <div>
       SearchReturn Here
-      <button onClick>Click me!</button>
+      <button onClick={getshit}>Click me!</button>
+      <div></div>
     </div>
   );
 };
