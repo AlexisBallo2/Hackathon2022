@@ -7,3 +7,7 @@
   display: inline-flex;
   margin: 10px;
 }
+
+.a {
+  display: ruby-base-container;
+}

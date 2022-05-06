@@ -29,9 +29,9 @@ const SearchReturn = () => {
       <div className={styles.box}>
         {dataToShow.map((item) => (
           <div key={item.ID} className={styles.indivBoxes}>
-            <div> Name : {item.itemOrService}</div>
+            <div className={styles.a}> Name : {item.itemOrService}</div>
 
-            <div> Price : {item.price}</div>
+            <div className={styles.a}> Price : {item.price}</div>
           </div>
         ))}
       </div>
