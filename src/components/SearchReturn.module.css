@@ -1,0 +1,9 @@
+.boxes {
+  border: 1px solid black;
+}
+
+.indivBoxes {
+  border: 1px solid red;
+  display: inline-flex;
+  margin: 10px;
+}

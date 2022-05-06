@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import { useState, useEffect } from "react";
+import styles from "./SearchReturn.module.css";
 //to submit a book into the database
 
 // const getallInformation = async () => {
@@ -25,11 +26,12 @@ const SearchReturn = () => {
   return (
     <div>
       <button onClick={getshit}>Click me!</button>
-      <div>
+      <div className={styles.box}>
         {dataToShow.map((item) => (
-          <div key={item.ID}>
-            <div>{item.itemOrService}</div>
-            <div>{item.price}</div>
+          <div key={item.ID} className={styles.indivBoxes}>
+            <div> Name : {item.itemOrService}</div>
+
+            <div> Price : {item.price}</div>
           </div>
         ))}
       </div>
