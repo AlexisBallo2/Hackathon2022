@@ -24,9 +24,15 @@ const SearchReturn = () => {
   };
   return (
     <div>
-      SearchReturn Here
       <button onClick={getshit}>Click me!</button>
-      <div></div>
+      <div>
+        {dataToShow.map((item) => (
+          <div key={item.ID}>
+            <div>{item.itemOrService}</div>
+            <div>{item.price}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
