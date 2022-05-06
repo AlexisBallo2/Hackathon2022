@@ -3,11 +3,16 @@
 }
 
 .indivBoxes {
-  border: 1px solid red;
-  display: inline-flex;
+  border: 3px solid royalblue;
+  border-radius: 10px;
+  padding: 1%;
+  display:inline-table;
   margin: 10px;
+  background-color: #CCDDFF;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .a {
   display: ruby-base-container;
+  
 }
