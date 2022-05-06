@@ -11,8 +11,8 @@ import knexInitializer from "knex";
  * @returns A promise that resolves to the review or null if it doesn't exist.
  *
  */
-export async function getDateInfo(id: string): Promise<any> {
-  const review = await knex("reservations");
+export async function getDateInfo(id) {
+  const review = await knex("");
 
   if (!review) {
     return null;
