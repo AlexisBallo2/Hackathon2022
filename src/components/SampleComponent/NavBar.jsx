@@ -7,8 +7,19 @@ import Logout from "../Logout";
 
 const NavBar = () => {
     return (
-        <div>
-            <div className = {styles.button_styles}> <Login /> <Logout /> </div>
+        <div className = "menubar">
+            <title>Midd XChange</title>
+            <div className = {styles.body}>
+            <div className = {styles.gridcontainer}>
+            
+            <div className = {styles.test}> <h1 className = {styles.h1}>Midd XChange</h1> </div>
+            <div> </div>
+            <div className = {styles.button_styles}> 
+                <Login />  </div>
+            <div className = {styles.button_styles}> <Logout /> 
+            </div>
+            </div>
+            </div>
         </div>
     );
 };
