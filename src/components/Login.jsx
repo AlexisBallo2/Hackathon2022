@@ -15,9 +15,10 @@ function Login() {
 
   const onFailure = (res) => {
     console.log("Login failed: res:", res);
-    alert(
+    /* alert(
       `Failed to login. 😢 Please ping this to repo owner twitter.com/sivanesh_fiz`
     );
+    */
   };
 
   return (

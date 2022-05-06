@@ -11,14 +11,31 @@ export async function getItem(idno) {
   return review;
 }
 
-export async function addItem(idno_, item_, time_, endtime_, user_, bsrb_, price_) {
-    knex("alltable").insert([
-        { ID: idno_},
-        { itemOrService: item_ },
-        { publishTime: time_ },
-        { endTime: endtime_},
-        { user: user_},
-        { buySellRentBorrow: bsrb_},
-        { price: price_}
-      ])
+export function getFullTable(idno) {
+  const review = knex("alltable");
+
+  if (!review) {
+    return null;
   }
+  return review;
+}
+
+export async function addItem(
+  idno_,
+  item_,
+  time_,
+  endtime_,
+  user_,
+  bsrb_,
+  price_
+) {
+  knex("alltable").insert([
+    { ID: idno_ },
+    { itemOrService: item_ },
+    { publishTime: time_ },
+    { endTime: endtime_ },
+    { user: user_ },
+    { buySellRentBorrow: bsrb_ },
+    { price: price_ },
+  ]);
+}
