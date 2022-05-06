@@ -15,7 +15,7 @@ function Login() {
 
   const onFailure = (res) => {
     console.log("Login failed: res:", res);
-    alert(`Failed to login. Please try again.`);
+    /* alert(`Failed to login. Please try again.`); */
   };
 
   return (
