@@ -1,7 +1,7 @@
 .box {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #2196f3;
+  /* background-color: #2196f3; */
   padding: 10px;
 }
 
@@ -34,11 +34,57 @@
 }
 
 .b {
-  background-color: red;
+  background-color: lightgray;
   font-size: small;
-  height: 30px;
-  padding-top: 1px;
-  width: 100px;
+  width: auto;
+  padding: 0.5px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
 }
+
+.main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.searchcontainer {
+  align-items: center;
+  width: 50%;
+  height: 7%;
+}
+.searchtext {
+  /*align-items: center;
+  display: inline-block;*/
+  padding: 0px;
+  height: 100%;
+  width: 80%;
+  float: inline-start;
+  /*vertical-align: middle;*/
+}
+.searchbtn {
+  /*display: inline-block*/
+  padding: 0px;
+  height: 55px; /* should use a percentage */
+  width: 55px; /* should use a percentage */
+  float: inline-end;
+  /*vertical-align: middle;*/
+}
+
+/*
+h1 {
+  margin: 10px;
+  font-size: 40px;
+  color: rgb(1, 1, 59);
+}*/
+
+/*
+ul li {
+  font-size: 20px;
+} */
