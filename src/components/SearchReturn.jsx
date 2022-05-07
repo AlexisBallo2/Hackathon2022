@@ -15,20 +15,20 @@ import TextField from "@mui/material/TextField";
 function SearchReturn(props) {
   function new1(dat) {
     var sc = document.getElementById("searchfield").value; // search contents
-    console.log(dat.data)
-    if (sc != ""){
+    console.log(dat.data);
+    if (sc != "") {
       var i = 0;
       var len = Object.keys(dat.data).length;
-      while (i < len){
+      while (i < len) {
         console.log(i);
-        console.log(dat.data[i])
+        console.log(dat.data[i]);
         if (sc != dat.data[i].itemOrService) {
           delete dat.data[i];
         }
-        i+=1;
+        i += 1;
       }
     }
-    console.log(dat.data)
+    console.log(dat.data);
     setdataToShow(dat.data);
   }
   const [dataToShow, setdataToShow] = useState([]);

@@ -25,7 +25,7 @@ async function submitItem(i, pt, et, u, b, img, p) {
 
 function call1(user, image) {
   var i = prompt("Item/Service");
-  var pt = prompt("Payment Time");
+  var pt = prompt("Date of Listing");
   var et = new Date().toString();
   var u = user;
   var bs = prompt("Buy, Sell, or Borrow");
