@@ -33,6 +33,8 @@
 }
 .returnItems {
   height: 80vh;
+  -ms-flex-align: center;
+  min-width: 50vw;
 }
 
 .indivBoxes span {
