@@ -11,7 +11,7 @@ async function submitItem(i, pt, et, u, b, img, p) {
       publishTime: pt,
       entryTime: et,
       user: u,
-      bySellRentBorrow: b,
+      buySellRentBorrow: b,
       image: img,
       price: p,
     }),
