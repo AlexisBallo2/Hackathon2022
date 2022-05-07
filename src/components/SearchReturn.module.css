@@ -1,10 +1,20 @@
-.box {
+/* .box {
   display: grid;
   grid-template-columns: auto auto auto;
-  /* background-color: #2196f3; */
+   background-color: #2196f3; 
   padding: 10px;
-}
 
+}  */
+.box{
+  display: grid ;
+  align-items: center ;
+  grid-auto-flow: row ;
+  grid-template-columns: unset; /* do not set template columns and rows */
+  grid-template-rows: unset;
+  overflow: scroll;
+  max-height: 65vh;
+  
+}
 .indivBoxes {
   border: 3px solid royalblue;
   border-radius: 10px;
@@ -22,6 +32,7 @@
 .entireDiv {
 }
 .returnItems {
+  height: 80vh;
 }
 
 .indivBoxes span {
