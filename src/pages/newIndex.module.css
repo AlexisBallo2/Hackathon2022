@@ -1,0 +1,11 @@
+.t {
+  position: absolute;
+  left: 130px;
+  top: 33px;
+}
+
+.x {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+}
