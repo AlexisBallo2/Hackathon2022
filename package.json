@@ -18,10 +18,7 @@
     "axios": "^0.27.2",
     "cloudinary": "^1.29.1",
     "datejs": "^1.0.0-rc3",
-<<<<<<< HEAD
     "image-resize": "^1.2.6",
-=======
->>>>>>> main
     "install": "^0.13.0",
     "knex": "^0.95.15",
     "moment": "^2.29.3",
