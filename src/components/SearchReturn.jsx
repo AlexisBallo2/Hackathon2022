@@ -15,10 +15,9 @@ import TextField from "@mui/material/TextField";
 function SearchReturn(props) {
   function new1(dat) {
     var sc = document.getElementById("searchfield").value; // search contents
-    for (let i = 0; i <= Object.keys(dat.data).length+1; i++) {
+    for (let i = 0; i <= Object.keys(dat.data).length + 1; i++) {
       console.log(i);
-      if (sc != dat.data[i].itemOrService)
-      {
+      if (sc != dat.data[i].itemOrService) {
         delete dat.data[i];
       }
     }
