@@ -63,7 +63,7 @@ const Home = () => {
         <div></div>
       </div>
 
-      <SearchReturn />
+      <SearchReturn user={userData} />
     </div>
   );
 };

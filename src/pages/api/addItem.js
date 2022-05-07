@@ -9,12 +9,14 @@ export default async function handler(req, res) {
     const user = req.body.user;
     const buySellRentBorrow = req.body.buySellRentBorrow;
     const price = req.body.price;
+    const image = req.body.image;
     const data = await addItem(
       itemOrService,
       publishTime,
       endTime,
       user,
       buySellRentBorrow,
+      image,
       price
     );
     res.status(200).json({ name: "success" });

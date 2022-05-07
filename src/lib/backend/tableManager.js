@@ -14,19 +14,21 @@ export async function getItem(idno) {
   return review;
 }
 
-export async function addItem(ios, pt, et, user, bsrb, p) {
-  const review = await knex("alltable").insert({
+export async function addItem(ios, pt, et, user, bsrb, image, p) {
+  const review = await knex("fullTable").insert({
     ID: Math.random * 1000,
     itemOrService: ios,
     publishTime: pt,
     endTime: et,
     user: user,
+    image: image,
     buySellRentBorrow: bsrb,
+
     price: p,
   });
 }
 export async function getFullTable() {
-  const review = await knex("alltable");
+  const review = await knex("fullTable");
   if (!review) {
     return null;
   }

@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  return knex.schema.createTable("alltable", (table) => {
+  return knex.schema.createTable("fullTable", (table) => {
     table.integer("ID").primary().useNullAsDefault;
     table.string("itemOrService").primary().useNullAsDefault;
     table.string("publishTime").primary().useNullAsDefault;
@@ -20,5 +20,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-  return knex.schema.dropTable("alltable");
+  return knex.schema.dropTable("fullTable");
 };
