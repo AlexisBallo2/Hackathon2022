@@ -11,7 +11,8 @@
   grid-auto-flow: row ;
   grid-template-columns: unset; /* do not set template columns and rows */
   grid-template-rows: unset;
-  overflow: scroll;
+  /* overflow: scroll; */
+  overflow-y: scroll;
   max-height: 65vh;
   
 }
@@ -27,6 +28,8 @@
   padding: 20px;
   font-size: 30px;
   text-align: center;
+  display: grid;
+  grid-template-columns: 60% auto auto;
 }
 
 .entireDiv {
@@ -34,7 +37,7 @@
 .returnItems {
   height: 80vh;
   -ms-flex-align: center;
-  min-width: 50vw;
+  width: 50vw;
 }
 
 .indivBoxes span {
@@ -101,3 +104,7 @@ h1 {
 ul li {
   font-size: 20px;
 } */
+.image {
+  max-width: 50px;
+  height: auto;
+}
