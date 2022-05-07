@@ -56,7 +56,7 @@ function SearchReturn(props) {
                 </span>
                 <span className={styles.b}>
                   {" "}
-                  <p>Price : {item.price}</p>
+                  <p style={{ "margin-top": "16px" }}>Price : {item.price}</p>
                 </span>
               </div>
             ))}
