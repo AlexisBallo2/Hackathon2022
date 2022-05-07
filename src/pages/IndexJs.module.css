@@ -27,3 +27,10 @@
 .holder {
   padding: 5px;
 }
+
+.anotherHolder {
+  background-color: red;
+  right: 8px;
+  position: absolute;
+  top: 8px;
+}

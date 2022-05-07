@@ -50,6 +50,7 @@ function FileUploadPage(passingProps) {
       baseURL = reader.result;
       setSelectedFile(baseURL);
     };
+    reader.DONE;
     setIsFilePicked(true);
     urlEncidedShit = baseURL;
     if (isFilePicked != false) {
@@ -70,7 +71,7 @@ function FileUploadPage(passingProps) {
       />
 
       <label className="btn btn-primary">
-        <i className="fa fa-image"></i> Submit
+        <i className="fa"></i> List Item
         <input
           type="file"
           style={{ display: "none" }}
@@ -87,13 +88,6 @@ function AddNewItem(props) {
   console.log("image url is ", urlEncidedShit);
   const [selectedFile, setSelectedFile] = useState(null);
   //this makes a new item into the database
-
-  function onImageChange(e) {
-    // myImage = URL.createObjectURL(...e.target.files);
-    console.log(e);
-    myImage = URL.createObjectURL(e.target);
-    console.log(myImage);
-  }
 
   return (
     <div>

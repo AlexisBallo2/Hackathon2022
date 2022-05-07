@@ -3,7 +3,7 @@
   padding-bottom: 0;
   background-color: #1c6ea4;
   vertical-align: middle;
-  height: 100px;
+  height: 110px;
   position: relative;
 }
 
@@ -15,6 +15,7 @@
   cursor: pointer;
   width: 100px;
 }
+
 ul.navList li {
   display: inline-block;
   padding: 1px;

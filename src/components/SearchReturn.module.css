@@ -9,7 +9,7 @@
   display: grid;
   align-items: center;
   grid-auto-flow: row;
-  grid-template-columns: unset; /* do not set template columns and rows */
+  grid-template-columns: 400px 400px; /* do not set template columns and rows */
   grid-template-rows: unset;
   /* overflow: scroll; */
   overflow-y: scroll;
@@ -33,7 +33,7 @@
 .returnItems {
   height: 80vh;
   -ms-flex-align: center;
-  width: 50vw;
+  width: 80vw;
 }
 
 .indivBoxes span {
@@ -59,6 +59,7 @@
 
 .main {
   display: flex;
+  margin-top: 20px;
   height: 100px;
   align-items: center;
   flex-direction: column;
@@ -75,7 +76,7 @@
   display: inline-block;*/
   padding: 0px;
 
-  width: 80%;
+  width: 85%;
   float: inline-start;
   /*vertical-align: middle;*/
 }
@@ -83,9 +84,9 @@
   /*display: inline-block*/
   padding: 0px;
   height: 55px; /* should use a percentage */
-  width: 55px; /* should use a percentage */
+  width: 65px; /* should use a percentage */
   float: inline-end;
-  /*vertical-align: middle;*/
+  border-radius: 4px;
 }
 
 /*
@@ -108,4 +109,11 @@ ul li {
   justify-content: center;
   height: 490px;
   margin-top: 50px;
+}
+
+.WrapperforAddItem {
+  position: absolute;
+  left: 10px;
+  top: -14px;
+  justify-content: right;
 }

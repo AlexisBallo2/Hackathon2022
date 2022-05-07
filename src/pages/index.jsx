@@ -35,32 +35,34 @@ const Home = () => {
   return (
     <div className={styles.fullPage}>
       <NavBar />
-      <div className={styles.loginDiv}>
-        <div className={styles.holder}>
-          {isLoggedIn == false ? (
-            <GoogleLogin
-              className={styles.login}
-              clientId={clientID}
-              buttonText="Login"
-              onSuccess={onLoginSuccess}
-              onFailure={onLoginFailure}
-              cookiePolicy={"single_host_origin"}
-              style={{ marginTop: "100px" }}
-              isSignedIn={true}
-            />
-          ) : (
-            <div className={styles.trueLogin}>
-              <p>Hello {userData.givenName}</p>
-              <img className={styles.userPic} src={userData.imageUrl}></img>
-            </div>
-            // <GoogleLogout
-            //   clientId={clientID}
-            //   buttonText="Logout"
-            //   onLogoutSuccess={onLogoutSuccess}
-            // ></GoogleLogout>
-          )}
+      <div className={`btn btn-primary ${styles.anotherHolder}`}>
+        <div className={[styles.loginDiv, "fa"]}>
+          <div className={styles.holder}>
+            {isLoggedIn == false ? (
+              <GoogleLogin
+                className={styles.login}
+                clientId={clientID}
+                buttonText="Login"
+                onSuccess={onLoginSuccess}
+                onFailure={onLoginFailure}
+                cookiePolicy={"single_host_origin"}
+                style={{ marginTop: "100px" }}
+                isSignedIn={true}
+              />
+            ) : (
+              <div className={styles.trueLogin}>
+                <p>Hello {userData.givenName}</p>
+                <img className={styles.userPic} src={userData.imageUrl}></img>
+              </div>
+              // <GoogleLogout
+              //   clientId={clientID}
+              //   buttonText="Logout"
+              //   onLogoutSuccess={onLogoutSuccess}
+              // ></GoogleLogout>
+            )}
+          </div>
+          <div></div>
         </div>
-        <div></div>
       </div>
 
       <SearchReturn user={userData} />

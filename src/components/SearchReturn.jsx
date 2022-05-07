@@ -29,7 +29,10 @@ function SearchReturn(props) {
 
   return (
     <div className={styles.entireDiv}>
-      <AddItemComponent userName={props.givenName} />
+      <div className={styles.WrapperforAddItem}>
+        <AddItemComponent userName={props.givenName} />
+      </div>
+
       <div className={styles.main}>
         <div className={styles.searchcontainer}>
           <TextField
