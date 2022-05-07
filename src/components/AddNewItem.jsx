@@ -1,7 +1,7 @@
 import react from "react";
 import { useState } from "react";
 
-async function submitItem(i, pt, e, u, b, p) {
+async function submitItem(i, pt, e, u, b, d, p) {
   const response = await fetch("/api/addItem", {
     method: "POST",
     body: JSON.stringify({
@@ -10,6 +10,7 @@ async function submitItem(i, pt, e, u, b, p) {
       endTime: e,
       user: u,
       bySellRentBorrow: b,
+      description : d,
       price: p,
     }),
     headers: {
@@ -28,8 +29,9 @@ function AddNewItem(props) {
     var et = prompt("Entry Time");
     var u = prompt("User ID");
     var bs = prompt("Buy, Sell, or Borrow");
+    var d = prompt("Description of Request")
     var p = prompt("Price");
-    submitItem(i, pt, et, u, bs, p);
+    submitItem(i, pt, et, u, bs, d, p);
   }
 
   return (
