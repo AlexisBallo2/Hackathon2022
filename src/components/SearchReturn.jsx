@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import { useState, useEffect } from "react";
 import styles from "./SearchReturn.module.css";
 import AddItemComponent from "./AddNewItem";
