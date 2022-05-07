@@ -32,12 +32,18 @@ function SearchReturn(props) {
     setdataToShow(dat.data);
   }
   const [dataToShow, setdataToShow] = useState([]);
+  const [selectedItem, setSelectedItem] = useState(0);
 
   //this function is for getting all the data from the database
   const getshit = async () => {
     const response = await fetch("/api/getData");
     const data = await response.json();
     new1(data);
+  };
+
+  const itemClick = (index) => () => {
+    console.log(index);
+    setSelectedItem(index);
   };
 
   return (
@@ -61,8 +67,12 @@ function SearchReturn(props) {
         </div>
         <div className={styles.returnItems}>
           <div className={styles.box}>
-            {dataToShow.map((item) => (
-              <div key={item.ID} className={styles.indivBoxes}>
+            {dataToShow.map((item, index) => (
+              <div
+                key={item.ID}
+                className={styles.indivBoxes}
+                onClick={itemClick(index)}
+              >
                 <span className={styles.a}> Name : {item.itemOrService}</span>
                 <span>
                   <img src={item.image} className={styles.images} />
@@ -74,10 +84,51 @@ function SearchReturn(props) {
               </div>
             ))}
           </div>
+          {/* SideBar Code */}
+          <div>
+            {dataToShow.length == 0 ? (
+              <div> </div>
+            ) : (
+              <GetPostsShit data={dataToShow} selected={selectedItem} />
+            )}
+          </div>
         </div>
       </div>
     </div>
   );
+}
+
+function GetPostsShit(props) {
+  console.log(props);
+  if (props.data == undefined) {
+    return <div> Nothing to Show</div>;
+  } else {
+    return (
+      <div className={styles.sideBar}>
+        {props.data.map((item) =>
+          item.ID - 1 == props.selected ? (
+            <div key={item.ID}>
+              <div className={styles.aa}> {item.itemOrService}</div>
+              <div className={styles.bb}>
+                {item.bySellRentBorrow == null
+                  ? "[type]"
+                  : item.bySellRentBorrow}{" "}
+              </div>
+              <div className={styles.cc}>{item.price}</div>
+              <div className={styles.dd}>
+                {" "}
+                {item.user == null
+                  ? "contact [User] for more information"
+                  : item.user}{" "}
+              </div>
+            </div>
+          ) : (
+            <div> </div>
+          )
+        )}
+      </div>
+    );
+  }
 }
 
 export default SearchReturn;
