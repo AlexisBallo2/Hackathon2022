@@ -1,6 +1,6 @@
 import react from "react";
 import { useState } from "react";
-import datejs from "node";
+// import datejs from "node";
 
 async function submitItem(i, pt, et, u, bs, d, p) {
   const response = await fetch("/api/addItem", {
@@ -27,7 +27,7 @@ function AddNewItem(props) {
   function call1() {
     var i = prompt("Item/Service");
     var pt = prompt("Payment Time");
-    var et = str(new datejs.Date());
+    var et = new Date().toString();
     var u = prompt("User ID");
     var bs = prompt("Buy, Sell, or Borrow");
     var d = prompt("Description")
