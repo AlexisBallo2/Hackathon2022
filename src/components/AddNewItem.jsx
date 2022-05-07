@@ -3,13 +3,13 @@ import { useState, useRef } from "react";
 import styles from "./AddNewItem.module.css";
 
 let urlEncidedShit = "";
-async function submitItem(i, pt, e, u, b, img, p) {
+async function submitItem(i, pt, et, u, b, img, p) {
   const response = await fetch("/api/addItem", {
     method: "POST",
     body: JSON.stringify({
       itemOrService: i,
       publishTime: pt,
-      endTime: e,
+      entryTime: et,
       user: u,
       bySellRentBorrow: b,
       image: img,
@@ -24,13 +24,13 @@ async function submitItem(i, pt, e, u, b, img, p) {
 }
 
 function call1(user, image) {
-  var i = prompt("item");
-  var pt = prompt("pt");
-  var et = prompt("et");
+  var i = prompt("Item/Service");
+  var pt = prompt("Payment Time");
+  var et = new Date().toString();
   var u = user;
-  var bs = prompt("bsrb");
+  var bs = prompt("Buy, Sell, or Borrow");
   var image = image;
-  var p = prompt("price");
+  var p = prompt("Price");
   submitItem(i, pt, et, u, bs, image, p);
 }
 
