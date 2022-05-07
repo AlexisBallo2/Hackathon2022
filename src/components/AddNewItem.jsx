@@ -11,7 +11,7 @@ async function submitItem(i, pt, et, u, b, img, p) {
       publishTime: pt,
       entryTime: et,
       user: u,
-      bySellRentBorrow: b,
+      buySellRentBorrow: b,
       image: img,
       price: p,
     }),
@@ -36,7 +36,7 @@ function call1(user, image) {
 
 function FileUploadPage(passingProps) {
   const [selectedFile, setSelectedFile] = useState("");
-  const [oldfile, setoldFile] = useState("");
+  const [oldfile, setoldFiles] = useState("");
 
   const [isFilePicked, setIsFilePicked] = useState(false);
 

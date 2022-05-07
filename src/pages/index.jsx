@@ -1,71 +1,40 @@
-import SearchReturn from "../components/SearchReturn";
-import styles from "./IndexJs.module.css";
-import NavBar from "../components/SampleComponent/NavBar";
-import GoogleLogin from "react-google-login";
-import { GoogleLogout } from "react-google-login";
-// import refreshTokenSetup from "react-google-login";
-import react, { useState } from "react";
-const clientID =
-  "800283224875-mfp8r4rqffqm3bijtaqeac2m13g0tems.apps.googleusercontent.com";
-
-const onLoginSuccess = (res) => {
-  console.log("Login Success: currentUser:", res.profileObj);
-  setisLoggedIn(true);
-  setuserData(res.profileObj);
-  // refreshTokenSetup(res);
-};
-
-const onLoginFailure = (res) => {
-  console.log("Login failed: res:", res);
-  /* alert(`Failed to login. Please try again.`); */
-};
-const onLogoutSuccess = () => {
-  console.log("Logout made successfully");
-  /* alert("Logout made successfully ✌"); */
-};
+import Main from "./main";
+import AboutPage from "../components/AboutPage";
+import { useState } from "react";
+import styles from "./newIndex.module.css";
 const Home = () => {
-  const onLoginSuccess = (res) => {
-    console.log("Login Success: currentUser:", res.profileObj);
-    setisLoggedIn(true);
-    setuserData(res.profileObj);
-    // refreshTokenSetup(res);
-  };
-  const [isLoggedIn, setisLoggedIn] = useState(false);
-  const [userData, setuserData] = useState({});
+  const [sendComponent, setSendComponenet] = useState(1);
+  function changeComponent() {
+    if (sendComponent == 1) {
+      setSendComponenet(0);
+    } else if (sendComponent == 0) {
+      setSendComponenet(1);
+    }
+  }
   return (
-    <div className={styles.fullPage}>
-      <NavBar />
-      <div className={`btn btn-primary ${styles.anotherHolder}`}>
-        <div className={[styles.loginDiv, "fa"]}>
-          <div className={styles.holder}>
-            {isLoggedIn == false ? (
-              <GoogleLogin
-                className={styles.login}
-                clientId={clientID}
-                buttonText="Login"
-                onSuccess={onLoginSuccess}
-                onFailure={onLoginFailure}
-                cookiePolicy={"single_host_origin"}
-                style={{ marginTop: "100px" }}
-                isSignedIn={true}
-              />
-            ) : (
-              <div className={styles.trueLogin}>
-                <p>Hello {userData.givenName}</p>
-                <img className={styles.userPic} src={userData.imageUrl}></img>
-              </div>
-              // <GoogleLogout
-              //   clientId={clientID}
-              //   buttonText="Logout"
-              //   onLogoutSuccess={onLogoutSuccess}
-              // ></GoogleLogout>
-            )}
-          </div>
-          <div></div>
+    <div style={{ height: "0px" }}>
+      {sendComponent == 1 ? (
+        <div>
+          <Main />
+          <button
+            className={`btn btn-primary ${styles.t}`}
+            onClick={changeComponent}
+          >
+            {" "}
+            About
+          </button>
         </div>
-      </div>
-
-      <SearchReturn user={userData} />
+      ) : (
+        <div>
+          <AboutPage />
+          <button
+            className={`btn btn-primary ${styles.x}`}
+            onClick={changeComponent}
+          >
+            Back to App
+          </button>
+        </div>
+      )}
     </div>
   );
 };
