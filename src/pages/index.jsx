@@ -1,4 +1,4 @@
-import Main from "./main";
+import Main from "./Main";
 import AboutPage from "../components/AboutPage";
 import { useState } from "react";
 import styles from "./newIndex.module.css";
