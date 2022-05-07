@@ -36,26 +36,31 @@ function call1(user, image) {
 
 function FileUploadPage(passingProps) {
   const [selectedFile, setSelectedFile] = useState("");
+  const [oldfile, setoldFile] = useState("");
 
   const [isFilePicked, setIsFilePicked] = useState(false);
 
   const changeHandler = (event) => {
     setSelectedFile(event.target.files[0]);
-    let baseURL = "";
-    let reader = new FileReader();
-    reader.readAsDataURL(event.target.files[0]);
-    reader.onload = () => {
-      // Make a fileInfo Object
-      console.log("Called", reader);
-      baseURL = reader.result;
-      setSelectedFile(baseURL);
-    };
-    reader.DONE;
-    setIsFilePicked(true);
-    urlEncidedShit = baseURL;
-    if (isFilePicked != false) {
-      console.log("value of selectedFIle", selectedFile);
-      call1(passingProps.info.userName, selectedFile);
+    if (selectedFile != oldfile || oldfile == "") {
+      console.log("selected file is different");
+      let baseURL = "";
+      let reader = new FileReader();
+      reader.readAsDataURL(event.target.files[0]);
+      reader.onload = () => {
+        // Make a fileInfo Object
+        console.log("Called", reader);
+        baseURL = reader.result;
+        setSelectedFile(baseURL);
+        setIsFilePicked(true);
+        urlEncidedShit = baseURL;
+        console.log(isFilePicked);
+        console.log("value of selectedFIle", baseURL);
+        call1(passingProps.info.userName, baseURL);
+        setoldFile(selectedFile);
+      };
+    } else {
+      alert("please try again");
     }
   };
 
@@ -84,9 +89,6 @@ function FileUploadPage(passingProps) {
 }
 
 function AddNewItem(props) {
-  const [image, setImage] = useState(null);
-  console.log("image url is ", urlEncidedShit);
-  const [selectedFile, setSelectedFile] = useState(null);
   //this makes a new item into the database
 
   return (
