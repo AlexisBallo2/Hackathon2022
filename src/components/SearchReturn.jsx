@@ -52,6 +52,7 @@ function SearchReturn(props) {
                 <span className={styles.b}>
                   {" "}
                   <p>Price : {item.price}</p>
+                  <img src={item.image} />
                 </span>
               </div>
             ))}
