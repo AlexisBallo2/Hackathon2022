@@ -20,7 +20,7 @@ async function submitItem(i, pt, e, u, b, p) {
   console.log(data);
 }
 
-function AddNewItem() {
+function AddNewItem(props) {
   //this makes a new item into the database
   function call1() {
     var i = prompt("item");

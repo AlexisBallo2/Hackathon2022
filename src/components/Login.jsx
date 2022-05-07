@@ -3,13 +3,10 @@ import { GoogleLogin } from "react-google-login";
 
 const clientID =
   "800283224875-mfp8r4rqffqm3bijtaqeac2m13g0tems.apps.googleusercontent.com";
+//test
 function Login() {
   const onSuccess = (res) => {
     console.log("Login Success: currentUser:", res.profileObj);
-    alert(
-      `Logged in successfully welcome ${res.profileObj.name}. \n See console for full profile object.`
-    );
-    refreshTokenSetup(res);
   };
 
   const onFailure = (res) => {

@@ -13,12 +13,8 @@ const NavBar = () => {
       </div>
       <div className={styles.ulHolder}>
         <ul className={styles.navList}>
-          <li>
-            <Login />
-          </li>
-          <li>
-            <Logout />
-          </li>
+          <li>{/* <Login /> */}</li>
+          <li>{/* <Logout /> */}</li>
         </ul>
       </div>
     </div>

@@ -26,6 +26,7 @@
   "devDependencies": {
     "@types/node": "17.0.21",
     "@types/react": "17.0.40",
+    "babel-eslint": "^10.1.0",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
     "react-google-login": "^5.2.2",
