@@ -14,9 +14,15 @@ import TextField from "@mui/material/TextField";
 
 function SearchReturn(props) {
   function new1(dat) {
-    console.log("dat", dat.data);
+    var sc = document.getElementById("searchfield").value; // search contents
+    for (let i = 0; i <= Object.keys(dat.data).length+1; i++) {
+      console.log(i);
+      if (sc != dat.data[i].itemOrService)
+      {
+        delete dat.data[i];
+      }
+    }
     setdataToShow(dat.data);
-    console.log(dataToShow);
   }
   const [dataToShow, setdataToShow] = useState([]);
 
@@ -37,7 +43,7 @@ function SearchReturn(props) {
         <div className={styles.searchcontainer}>
           <TextField
             className={styles.searchtext}
-            id="outlined-basic"
+            id="searchfield"
             variant="outlined"
             fullWidth
             label="Search"
