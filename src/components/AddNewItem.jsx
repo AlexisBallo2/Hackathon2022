@@ -36,7 +36,7 @@ function call1(user, image) {
 
 function FileUploadPage(passingProps) {
   const [selectedFile, setSelectedFile] = useState("");
-  const [oldfile, setoldFile] = useState("");
+  const [oldfile, setoldFiles] = useState("");
 
   const [isFilePicked, setIsFilePicked] = useState(false);
 
