@@ -24,16 +24,21 @@ const SearchReturn = () => {
     new1(data);
   };
   return (
-    <div>
-      <button onClick={getshit}>Click me!</button>
-      <div className={styles.box}>
-        {dataToShow.map((item) => (
-          <div key={item.ID} className={styles.indivBoxes}>
-            <div className={styles.a}> Name : {item.itemOrService}</div>
+    <div className={styles.entireDiv}>
+      <div className={styles.returnItems}>
+        <button onClick={getshit}>Click me!</button>
+        <div className={styles.box}>
+          {dataToShow.map((item) => (
+            <div key={item.ID} className={styles.indivBoxes}>
+              <span className={styles.a}> Name : {item.itemOrService}</span>
 
-            <div className={styles.a}> Price : {item.price}</div>
-          </div>
-        ))}
+              <span className={styles.b}>
+                {" "}
+                <p>Price : {item.price}</p>
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
