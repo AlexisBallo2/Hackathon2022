@@ -1,6 +1,9 @@
 import { NextPage } from "next";
 import { useState, useEffect } from "react";
 import styles from "./SearchReturn.module.css";
+
+import TextField from "@mui/material/TextField";
+//import List from "./Components/List"
 //to submit a book into the database
 
 // const getallInformation = async () => {
@@ -10,7 +13,7 @@ import styles from "./SearchReturn.module.css";
 //   setdataToShow(data);
 // };
 
-const SearchReturn = () => {
+function SearchReturn() {
   function new1(dat) {
     console.log("dat", dat.data);
     setdataToShow(dat.data);
@@ -25,18 +28,29 @@ const SearchReturn = () => {
   };
   return (
     <div>
-      <button onClick={getshit}>Click me!</button>
-      <div className={styles.box}>
-        {dataToShow.map((item) => (
-          <div key={item.ID} className={styles.indivBoxes}>
-            <div className={styles.a}> Name : {item.itemOrService}</div>
+      <div className={styles.main}>
+        <h1></h1>
+        <div className={styles.searchcontainer}>
+            <TextField className={styles.searchtext}
+              id="outlined-basic"
+              variant="outlined"
+              fullWidth
+              label="Search" />
+            <button className = {styles.searchbtn} onClick={getshit}>S</button>
+        </div>
 
-            <div className={styles.a}> Price : {item.price}</div>
-          </div>
-        ))}
       </div>
+      <div className={styles.box}>
+          {dataToShow.map((item) => (
+            <div key={item.ID} className={styles.indivBoxes}>
+              <div className={styles.a}> Name: {item.itemOrService}</div>
+
+              <div className={styles.a}> Price: {item.price}</div>
+            </div>
+          ))}
+        </div>
     </div>
   );
-};
+}
 
 export default SearchReturn;

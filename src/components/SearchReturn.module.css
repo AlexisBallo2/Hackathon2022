@@ -16,3 +16,49 @@
   display: ruby-base-container;
   
 }
+
+
+
+.main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.searchcontainer {
+  align-items: center;
+  width: 50%;
+  height: 7%;
+}
+.searchtext {
+  /*align-items: center;
+  display: inline-block;*/
+  padding: 0px;
+  height: 100%;
+  width: 92.5%;
+  float: inline-start;
+  /*vertical-align: middle;*/
+}
+.searchbtn {
+  /*display: inline-block*/
+  padding: 0px;
+  height: 55px; /* should use a percentage */
+  width: 55px; /* should use a percentage */
+  float: inline-end;
+  /*vertical-align: middle;*/
+}
+
+/*
+h1 {
+  margin: 10px;
+  font-size: 40px;
+  color: rgb(1, 1, 59);
+}*/
+
+/*
+ul li {
+  font-size: 20px;
+} */
