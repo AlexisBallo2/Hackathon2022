@@ -48,11 +48,12 @@ function SearchReturn(props) {
             {dataToShow.map((item) => (
               <div key={item.ID} className={styles.indivBoxes}>
                 <span className={styles.a}> Name : {item.itemOrService}</span>
-
+                <span>
+                  <img src={item.image} className={styles.images} />
+                </span>
                 <span className={styles.b}>
                   {" "}
                   <p>Price : {item.price}</p>
-                  <img src={item.image} />
                 </span>
               </div>
             ))}
