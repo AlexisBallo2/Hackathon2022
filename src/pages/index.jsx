@@ -3,7 +3,7 @@ import AboutPage from "../components/AboutPage";
 import { useState } from "react";
 import styles from "./newIndex.module.css";
 const Home = () => {
-  const [sendComponent, setSendComponenet] = useState(0);
+  const [sendComponent, setSendComponenet] = useState(1);
   function changeComponent() {
     if (sendComponent == 1) {
       setSendComponenet(0);
