@@ -68,20 +68,24 @@ function SearchReturn(props) {
         <div className={styles.returnItems}>
           <div className={styles.box}>
             {dataToShow.map((item, index) => (
-              <div
-                key={item.ID}
-                className={styles.indivBoxes}
-                onClick={itemClick(index)}
-              >
-                <span className={styles.a}> Name : {item.itemOrService}</span>
-                <span>
-                  <img src={item.image} className={styles.images} />
-                </span>
-                <span className={styles.b}>
-                  {" "}
-                  <p style={{ "margin-top": "16px" }}>Price : {item.price}</p>
-                </span>
-              </div>
+              <span className={styles.itemcontainer}>
+                <div
+                  key={item.ID}
+                  className={styles.indivBoxes}
+                  onClick={itemClick(index)}
+                >
+                  <div className={styles.itemNamePrice}>
+                    <span className> Item : {item.itemOrService} </span>
+                    <br />
+                    <span className> Mode : {item.bs} </span>
+                    <br />
+                    <span className> User : {item.givenName} </span>
+                    <br />
+                    <span className> Price :${item.price} </span>
+                  </div>
+                  <img className={styles.itemImg} src={item.image} />
+                </div>
+              </span>
             ))}
           </div>
           {/* SideBar Code */}
