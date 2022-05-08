@@ -6,8 +6,9 @@ const AboutPage = () => {
   return (
     <div className={styles.aboutPage}>
       <title>About Us - Midd XChange</title>
-      <div className={styles.mainText}>
-        <h1 className={styles.aboutHeader}>About Midd XChange</h1>
+      <div></div>
+      <div className={styles.div}>
+        <h1 className={styles.h1}>About Midd XChange</h1>
         <p>
           The Middlebury community has long been in need of a centralized
           website to connect people through an informal market economy. Midd
@@ -39,6 +40,7 @@ const AboutPage = () => {
           Crowd-sourcing the informal Middlebury economy, allowing students to
           gain access to resources they might not have had access to previously.{" "}
         </p>{" "}
+        <hr></hr>
         <br />
         <p>Authors: </p>
         <a href="https://github.com/AlexisBallo2">Alexis Ballo</a> <br></br>
@@ -46,7 +48,8 @@ const AboutPage = () => {
         <a href="https://github.com/LiamPatty">Liam Patty</a> <br></br>
         <a href="https://github.com/jsandoval2610">Julian Sandoval</a> <br></br>
         <a href="https://github.com/jpaul342">Jack Paul</a> <br></br>
-      </div>
+      </div>{" "}
+      <div> </div>
     </div>
   );
 };
