@@ -1,3 +1,17 @@
 .aboutPage {
-    background-color: grey;
+    background-color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: center;
+    display:grid;
+    grid-template-columns: 15vw 70vw 15vw;
+}
+.h1 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5em;
+
+}
+.div {
+    width: 75vw;
+    text-align: center;
+    justify-content: center;
 }
