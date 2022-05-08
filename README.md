@@ -1,6 +1,8 @@
 # Middlebury Hackathon 2022
 ## Midd XChange
 
+You can also view a live demo [here](thecollegemerch.com:3000)
+
 The Middlebury community has long been in need of a centralized website to connect people through an informal market economy.  Midd XChange seeks to fill this gap.  We seek to foster further interconnectdness in the Middlebury community through connecting buyers, renters, and sellers.  
 
 Users of the site can browse postings through our easy-to-use scroll panel.  Clicking on a post will provide contact information of the seller.  To add a post, sellers can click the "list item" button conveniently located in the top-left corner of our website.  After providing a photo of the product or service, sellers will fill out information.  
@@ -12,3 +14,4 @@ Our website can lower entrance barriers to hobbies and skills through providing 
 TeamMates: [terryluongo](https://github.com/terryluongo), [jsandoval2610](https://github.com/jsandoval2610), [jpaul342](https://github.com/jpaul342), [LiamPatty](https://github.com/LiamPatty)
 
 Alexis Ballo, Liam Patty, Terry Luongo, Julian Sandoval, Jack Paul
+
