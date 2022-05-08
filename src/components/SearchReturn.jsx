@@ -48,6 +48,7 @@ function SearchReturn(props) {
 
   return (
     <div className={styles.entireDiv}>
+      <title>Midd XChange</title>
       <div className={styles.WrapperforAddItem}>
         <AddItemComponent userName={props.givenName} />
       </div>

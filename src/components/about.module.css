@@ -1,3 +1,16 @@
 .aboutPage {
-    background-color: grey;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.aboutHeader {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 40px;
+}
+
+.mainText {
+  width: 50%;
 }
