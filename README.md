@@ -1,7 +1,7 @@
 # Middlebury Hackathon 2022
 ## Midd XChange
 
-You can also view a live demo [here](http://thecollegemerch.com:3000)
+You can also view a live **DEMO** [here](http://thecollegemerch.com:3000)
 
 The Middlebury community has long been in need of a centralized website to connect people through an informal market economy.  Midd XChange seeks to fill this gap.  We seek to foster further interconnectdness in the Middlebury community through connecting buyers, renters, and sellers.  
 
